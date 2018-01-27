@@ -1,0 +1,32 @@
+Random Word(attempt #{{request.session.time}})
+
+
+<div>{{request.session.string}}</div>
+
+
+
+
+
+
+<form action = 'generate/' method="post">
+	{% csrf_token %}
+	<input type="submit" name="submit" value="Generate">
+</form>
+<form action = 'startover/' method="post">
+	{% csrf_token %}
+	<input type="submit" name="submit" value="Startover">
+</form>
+
+
+<style type="text/css">
+	div{
+		width: 500px;
+		height: 100px;
+		background-color: lightgrey;
+		border:1px solid black;
+		text-align: center;
+		font-size: 36px;
+		padding-top: 70px
+
+	}
+</style>
